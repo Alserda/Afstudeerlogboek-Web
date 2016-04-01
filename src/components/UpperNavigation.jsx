@@ -4,7 +4,7 @@ class UpperNavigation extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hallo</h1>
+        <h1>Hello Alserda Media!</h1>
       </div>
     )
   }

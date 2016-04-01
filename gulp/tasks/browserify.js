@@ -15,7 +15,8 @@ var source       = require('vinyl-source-stream');
 var config       = require('../config').browserify;
 var babelify     = require('babelify');
 
-var reactPreset = require('babel-preset-react');
+/* Presets for Babelify */
+var reactPreset  = require('babel-preset-react');
 var es2015Preset = require('babel-preset-es2015');
 
 gulp.task('browserify', function(callback) {
