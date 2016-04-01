@@ -1,6 +1,5 @@
 # React Boilerplate
-Date: 1 April 2016
-Configured & saved, so this boilerplate can be used for future projects.
+Date: 1 April 2016. Configured & saved, so this boilerplate can be used for future projects.
 
 ## Contains
 * LESS
