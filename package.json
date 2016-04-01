@@ -1,0 +1,37 @@
+{
+  "name": "Logbook",
+  "version": "1.0.0",
+  "description": "Saaa logbook",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Peter Alserda",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^7.0.3",
+    "gulp": "^3.8.10",
+    "gulp-notify": "^2.1.0",
+    "gulp-util": "^3.0.1",
+    "gulp-less": "^3.0.3",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.0.0",
+    "watchify": "^2.2.1",
+    "connect-history-api-fallback": "^1.1.0",
+    "history": "^1.13.1"
+  },
+  "dependencies": {
+    "es6-promise": "^3.1.2",
+    "isomorphic-fetch": "^2.2.1",
+    "jquery": "^2.2.0",
+    "babel-preset-react": "^6.5.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.2.1",
+    "react-router": "^1.0.2",
+    "redux": "^3.2.1",
+    "redux-logger": "^2.4.0",
+    "redux-thunk": "^1.0.3",
+    "superagent": "^1.8.0"
+  }
+}
