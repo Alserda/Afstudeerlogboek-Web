@@ -3,11 +3,11 @@ Date: 1 April 2016
 Configured & saved, so this boilerplate can be used for future projects.
 
 ## Contains
-⋅⋅* LESS
-⋅⋅* Gulp
-⋅⋅* ES6
-⋅⋅* React
-⋅⋅* Redux
+* LESS
+* Gulp
+* ES6
+* React
+* Redux
 
 ## Installation
 1. clone the repository
