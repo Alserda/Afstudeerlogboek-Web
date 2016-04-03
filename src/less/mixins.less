@@ -1,0 +1,91 @@
+/**
+* Fontawesome specific helper mixins
+*/
+.fa-icon-content(@icon) {
+  .fa-icon();
+  content: @icon;
+}
+
+.fa-icon-content(@icon, @rules) {
+  .fa-icon-content(@icon);
+  @rules();
+}
+
+.fa-icon-before(@icon) {
+  &:before {
+    .fa-icon-content(@icon);
+  }
+}
+
+.fa-icon-before(@icon, @rules) {
+  &:before {
+    .fa-icon-content(@icon, @rules);
+  }
+}
+
+.fa-icon-after(@icon) {
+  &:after {
+    .fa-icon-content(@icon);
+  }
+}
+
+.fa-icon-after(@icon, @rules) {
+  &:after {
+    .fa-icon-content(@icon, @rules);
+  }
+}
+
+.ionicon-before(@icon) {
+  &:before {
+    .ion;
+    content: @icon;
+  }
+}
+.ionicon-before(@icon, @rules) {
+  &:before {
+    .ion;
+    content: @icon;
+    @rules();
+  }
+}
+.ionicon-after(@icon) {
+  &:after {
+    .ion;
+    content: @icon;
+  }
+}
+.ionicon-after(@icon, @rules) {
+  &:after {
+    .ion;
+    content: @icon;
+    @rules();
+  }
+}
+
+.placeholder-color(@color) {
+  &::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: @color;
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: @color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: @color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: @color;
+  }
+}
+
+.crispier-fonts() {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

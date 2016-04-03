@@ -1,0 +1,35 @@
+@import '../variables';
+@import '../mixins';
+@import '../../../bower_components/lost/less/lost';
+@import '../../../bower_components/fontawesome/less/font-awesome';
+
+nav.navigationBar {
+  background: @color-light-blue;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  > div {
+    .column(1 of 3);
+  }
+
+  .session {
+    display: inline-block;
+    float: left;
+
+    span {
+      color: white;
+      opacity: 0.35;
+      &.name {
+        font-weight: bold;
+        opacity: 1;
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+  }
+}
