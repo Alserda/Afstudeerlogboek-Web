@@ -1,6 +1,6 @@
 import React from 'react'
 
-class NavigationItem extends React.Component {
+export default class NavigationItem extends React.Component {
   render() {
     var items = this.props.items
     let plusLinkTo = this.props.plusLinkTo
@@ -25,5 +25,3 @@ class NavigationItem extends React.Component {
     )
   }
 }
-
-export default NavigationItem

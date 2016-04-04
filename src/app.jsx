@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-import UpperNavigation from './components/UpperNavigation.jsx';
+import UpperNavigation from './components/UpperNavigation'
+import LogbookPosts from './components/LogbookPosts'
 
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <UpperNavigation />
+        <LogbookPosts />
+      </div>
+    )
+  }
+}
 ReactDOM.render(
-  <UpperNavigation />,
+  <App />,
   document.getElementById('app')
 );

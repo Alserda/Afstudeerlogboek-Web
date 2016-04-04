@@ -1,8 +1,8 @@
 import React from 'react'
 
-import NavigationItem from './NavigationItem.jsx'
+import NavigationItem from './NavigationItem'
 
-class NavigationItems extends React.Component {
+export default class NavigationItems extends React.Component {
   render() {
     return (
       <div>
@@ -12,5 +12,3 @@ class NavigationItems extends React.Component {
     )
   }
 }
-
-export default NavigationItems

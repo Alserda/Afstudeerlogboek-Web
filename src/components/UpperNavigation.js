@@ -1,10 +1,10 @@
 import React from 'react';
 
-import NavigationBarSession from './NavigationBarSession.jsx'
-import NavigationBarTitle from './NavigationBarTitle.jsx'
-import NavigationItem from './NavigationItem.jsx'
+import NavigationBarSession from './NavigationBarSession'
+import NavigationBarTitle from './NavigationBarTitle'
+import NavigationItem from './NavigationItem'
 
-class UpperNavigation extends React.Component {
+export default class UpperNavigation extends React.Component {
   render() {
     return (
       <nav className="navigationBar">
@@ -17,5 +17,3 @@ class UpperNavigation extends React.Component {
     )
   }
 }
-
-export default UpperNavigation

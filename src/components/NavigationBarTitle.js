@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NavigationBarTitle extends React.Component {
+export default class NavigationBarTitle extends React.Component {
   render() {
     return (
       <div className="title">
@@ -9,5 +9,3 @@ class NavigationBarTitle extends React.Component {
     )
   }
 }
-
-export default NavigationBarTitle
