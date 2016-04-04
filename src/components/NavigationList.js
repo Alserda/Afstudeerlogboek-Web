@@ -1,7 +1,26 @@
 import React, { Component } from 'react';
 
-export default class NavigationList extends React.Component {
+import NavigationItem from './NavigationItem'
+
+export default class NavigationList extends Component {
   render() {
-    return <div>henk</div>
+    const { items, plusPath } = this.props
+
+    return (
+      <div className="navigationItems">
+        <ul>
+          {items.map(function(item, index) {
+            {switch(item) {
+              case "plus":
+                return (
+                  <NavigationItem item={item} key={index} path={plusPath} />
+                )
+              default:
+                console.log(item, " zit er niet in")
+            }}
+          })}
+        </ul>
+      </div>
+    )
   }
 }

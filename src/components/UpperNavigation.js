@@ -3,6 +3,7 @@ import React from 'react';
 import NavigationBarSession from './NavigationBarSession'
 import NavigationBarTitle from './NavigationBarTitle'
 import NavigationItem from './NavigationItem'
+import NavigationList from './NavigationList'
 
 export default class UpperNavigation extends React.Component {
   render() {
@@ -10,9 +11,7 @@ export default class UpperNavigation extends React.Component {
       <nav className="navigationBar">
         <NavigationBarSession />
         <NavigationBarTitle title="Dit is een titel" />
-        <div className="navigationItems">
-          <NavigationItem items={["plus", "henk"]} plusLinkTo="https://www.google.nl" />
-        </div>
+        <NavigationList items={["plus", "henk"]} plusPath="https://www.google.nl" />
       </nav>
     )
   }
