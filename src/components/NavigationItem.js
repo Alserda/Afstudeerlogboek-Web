@@ -2,8 +2,8 @@ import React from 'react'
 
 export default class NavigationItem extends React.Component {
   render() {
-    var items = this.props.items
-    let plusLinkTo = this.props.plusLinkTo
+    const { items, plusLinkTo } = this.props
+    console.log(items, plusLinkTo)
 
     return (
       <ul>
@@ -15,10 +15,8 @@ export default class NavigationItem extends React.Component {
                   <a href={plusLinkTo}></a>
                 </li>
               )
-
             default:
               console.log(item, " zit er niet in")
-
           }}
         })}
       </ul>
