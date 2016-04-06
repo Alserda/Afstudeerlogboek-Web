@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Boilerplate which can be used for future projects. Check the README for more information",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "lint": "eslint src"
   },
   "author": "Alserda Media",
   "license": "ISC",
@@ -13,7 +14,11 @@
     "browser-sync": "^1.8.1",
     "browserify": "^7.0.3",
     "connect-history-api-fallback": "^1.1.0",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3",
     "gulp": "^3.8.10",
+    "gulp-eslint": "^2.0.0",
     "gulp-less": "^3.0.3",
     "gulp-notify": "^2.1.0",
     "gulp-util": "^3.0.1",
