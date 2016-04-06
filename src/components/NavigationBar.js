@@ -5,7 +5,7 @@ import NavigationBarTitle from './NavigationBarTitle'
 import NavigationItem from './NavigationItem'
 import NavigationList from './NavigationList'
 
-export default class UpperNavigation extends React.Component {
+export default class NavigationBar extends React.Component {
   render() {
     return (
       <nav className="navigationBar">

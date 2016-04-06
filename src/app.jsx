@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-import UpperNavigation from './components/UpperNavigation'
-import LogbookPosts from './components/LogbookPosts'
+import NavigationBar from './components/NavigationBar'
+import PostsView from './containers/PostsView'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <UpperNavigation />
-        <LogbookPosts />
+        <NavigationBar />
+        <PostsView />
       </div>
     )
   }
