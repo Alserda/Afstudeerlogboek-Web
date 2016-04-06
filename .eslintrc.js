@@ -5,6 +5,6 @@ module.exports = {
     ],
     "rules": {
       "semi": [0, "never"],
-      "react/prefer-stateless-function": 1,
+      "react/prefer-stateless-function": 0,
     }
 };

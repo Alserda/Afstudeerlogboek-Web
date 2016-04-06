@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 
-export default class NavigationBarTitle extends React.Component {
+export default class NavigationBarTitle extends Component {
   render() {
     return (
       <div className="title">
@@ -8,4 +8,8 @@ export default class NavigationBarTitle extends React.Component {
       </div>
     )
   }
+}
+
+NavigationBarTitle.propTypes = {
+  title: PropTypes.string,
 }

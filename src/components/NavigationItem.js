@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 
-export default class NavigationItem extends React.Component {
+export default class NavigationItem extends Component {
   render() {
     const { item, key, path } = this.props
 
@@ -10,4 +10,10 @@ export default class NavigationItem extends React.Component {
       </li>
     )
   }
+}
+
+NavigationItem.propTypes = {
+  item: PropTypes.string,
+  key: PropTypes.number,
+  path: PropTypes.string,
 }
