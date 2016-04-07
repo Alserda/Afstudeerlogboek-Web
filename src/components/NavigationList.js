@@ -7,7 +7,7 @@ export default class NavigationList extends Component {
     const { items, plusPath } = this.props
 
     return (
-      <div className="navigationItems">
+      <div className='navigationItems'>
         <ul>
           {items.map((item, index) => {
             switch (item) {

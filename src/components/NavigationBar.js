@@ -7,10 +7,10 @@ import NavigationList from './NavigationList'
 export default class NavigationBar extends React.Component {
   render() {
     return (
-      <nav className="navigationBar">
+      <nav className='navigationBar'>
         <NavigationBarSession />
-        <NavigationBarTitle title="Dit is een titel" />
-        <NavigationList items={['plus', 'henk']} plusPath="https://www.google.nl" />
+        <NavigationBarTitle title='Dit is een titel' />
+        <NavigationList items={['plus', 'henk']} plusPath='https://www.google.nl' />
       </nav>
     )
   }
