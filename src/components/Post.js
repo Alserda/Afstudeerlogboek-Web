@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import Icon from './Icon';
+
 export default class Post extends Component {
   render() {
     const { title, author } = this.props.post
@@ -10,6 +12,7 @@ export default class Post extends Component {
         <span className='title'>{title}</span>
         <div className='colorBorder' />
         <span className='author'>Door {author}</span>
+        <Icon type='edit' />
       </li>
     )
   }

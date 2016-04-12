@@ -7,8 +7,9 @@ export default class Root extends Component {
     return (
       <div>
         <NavigationBar />
-
-        {this.props.children}
+        <section id='middle'>
+          {this.props.children}
+        </section>
       </div>
     )
   }

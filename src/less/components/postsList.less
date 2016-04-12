@@ -1,0 +1,57 @@
+@import '../variables';
+@import '../mixins';
+@import '../elements';
+@import '../../../bower_components/lost/less/lost';
+@import '../../../bower_components/fontawesome/less/font-awesome';
+
+.postsList {
+  .center(1240px);
+  padding-top: 60px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      .column(1 of 4, @gut: 40px);
+      .box-shadow(0px 0px 7px 0px rgba(0,0,0,0.21));
+      .rounded(@radius: 4px);
+      background: white;
+      cursor: pointer;
+      height: 310px;
+      list-style: none;
+      padding: 30px 20px;
+      margin-bottom: 40px;
+
+      &:hover {
+        .box-shadow(0px 0px 14px 0px rgba(0,0,0,0.21));
+      }
+
+      span {
+        display: block;
+        font-size: 18px;
+        line-height: 21px;
+
+        &.date {
+          color: @color-font-light-grey;
+          margin-bottom: 2px;
+        }
+
+        &.title {
+          color: @color-font-title-blue;
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        &.author {
+          color: @color-font-grey;
+
+          > span {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}
