@@ -3,7 +3,6 @@ import PostsList from '../components/PostsList';
 
 export default class PostsView extends Component {
   render() {
-    console.log(this.props.children);
     const posts = [
       {
         title: 'Discover your path to success Part 3',

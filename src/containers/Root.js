@@ -4,7 +4,6 @@ import NavigationBar from '../components/NavigationBar'
 
 export default class Root extends Component {
   render() {
-    console.log(this.props.children);
     return (
       <div>
         <NavigationBar />
