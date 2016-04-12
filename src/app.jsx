@@ -1,22 +1,17 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
+import { render } from 'react-dom'
+import { Router } from 'react-router'
+import { createHistory, useBasename } from 'history';
 
-import NavigationBar from './components/NavigationBar'
-import PostsView from './containers/PostsView'
 import routes from './routes'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <NavigationBar />
-        <PostsView />
-      </div>
-    )
-  }
-}
+const target = document.getElementById('app')
+const history = useBasename(createHistory)({
+  basename: '/test',
+});
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+render(
+  <Router routes={routes} history={history} />,
+  target
 );
+

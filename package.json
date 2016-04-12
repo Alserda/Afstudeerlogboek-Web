@@ -22,7 +22,7 @@
     "gulp-less": "^3.0.3",
     "gulp-notify": "^2.1.0",
     "gulp-util": "^3.0.1",
-    "history": "^1.13.1",
+    "history": "^1.17.0",
     "jszip": "^2.5.0",
     "pretty-hrtime": "^1.0.1",
     "require-dir": "^0.3.0",
