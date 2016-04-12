@@ -21,6 +21,7 @@
       height: 310px;
       list-style: none;
       padding: 30px 20px;
+      position: relative;
       margin-bottom: 40px;
 
       &:hover {
@@ -46,11 +47,27 @@
 
         &.author {
           color: @color-font-grey;
+          position: absolute;
+          bottom: 50px;
 
           > span {
             display: inline;
           }
         }
+      }
+
+      div.colorBorder {
+        .column(1 of 2, @gut: 0);
+        .rounded(@radius: 2px);
+        background: @color-light-blue;
+        height: 4px;
+        position: absolute;
+        bottom: 84px;
+      }
+
+      div.icon {
+        position: absolute;
+        bottom: 22px;
       }
     }
   }
