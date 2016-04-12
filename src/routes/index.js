@@ -1,4 +1,4 @@
-import { Route } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 import React from 'react'
 
 import Root from '../containers/Root';
@@ -8,7 +8,7 @@ import GridView from '../containers/GridView';
 
 export default (
   <Route path='/' component={Root}>
-    <Route path='henk' component={PostsView} />
+    <IndexRoute component={PostsView} />
     <Route path='gridview' component={GridView} />
   </Route>
 )
