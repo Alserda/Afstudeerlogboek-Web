@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { createHistory } from 'history';
 
 import Icon from './Icon';
 
@@ -9,7 +10,10 @@ export default class Post extends Component {
   }
 
   clickedPost() {
-    this.props.onClick(this.props.post)
+    const history = createHistory()
+    history.push({
+      pathname: `posts/${this.props.id}`,
+    })
   }
 
   render() {
@@ -29,5 +33,5 @@ export default class Post extends Component {
 
 Post.propTypes = {
   post: PropTypes.object,
-  onClick: PropTypes.func,
+  id: PropTypes.number,
 }
