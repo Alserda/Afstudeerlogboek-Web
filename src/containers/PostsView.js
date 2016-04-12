@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import PostsList from '../components/PostsList';
 
 export default class PostsView extends Component {
   render() {
+    console.log(this.props.children);
     const posts = [
       {
         title: 'Discover your path to success Part 3',
@@ -41,4 +42,11 @@ export default class PostsView extends Component {
       </div>
     )
   }
+}
+
+PostsView.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 }
