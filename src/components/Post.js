@@ -1,18 +1,25 @@
 import React, { Component, PropTypes } from 'react';
-import { createHistory } from 'history';
-
+import Modal from 'react-modal';
 import Icon from './Icon';
 
 export default class Post extends Component {
   constructor() {
     super()
     this.clickedPost = this.clickedPost.bind(this)
+    this.state = {
+      modalIsOpen: false,
+    }
   }
 
   clickedPost() {
-    const history = createHistory()
-    history.push({
-      pathname: `posts/${this.props.id}`,
+    this.setState({
+      modalIsOpen: true,
+    })
+  }
+
+  closeModal() {
+    this.setState({
+      modalIsOpen: false,
     })
   }
 
@@ -34,4 +41,5 @@ export default class Post extends Component {
 Post.propTypes = {
   post: PropTypes.object,
   id: PropTypes.number,
+  handleClick: PropTypes.func,
 }
