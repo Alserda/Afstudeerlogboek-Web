@@ -11,7 +11,7 @@ export default (
   <Route path='/' component={Root}>
     <IndexRoute component={PostsView} />
     <Route path='/posts' component={PostsView}>
-      <Route path='/posts/:id' component={PostDetail} />
+      <Route path='/posts/:id' />
     </Route>
     <Route path='gridview' component={GridView} />
   </Route>

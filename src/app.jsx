@@ -6,9 +6,7 @@ import { createHistory, useBasename } from 'history';
 import routes from './routes'
 
 const target = document.getElementById('app')
-const history = useBasename(createHistory)({
-  basename: '/test',
-});
+const history = createHistory()
 
 render(
   <Router routes={routes} history={history} />,

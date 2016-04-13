@@ -1,10 +1,13 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router';
 import Post from './Post'
 
 export default class PostsList extends Component {
   render() {
     const postComponents = this.props.posts.map((post, index) => (
-      <Post post={post} id={index} key={index} openModal={this.props.openModal} />
+      <Link key={index} to={`/posts/${index}`}>
+        <Post post={post} id={index} />
+      </Link>
     ));
 
     return (

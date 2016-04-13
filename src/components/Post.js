@@ -2,20 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import Icon from './Icon';
 
 export default class Post extends Component {
-  constructor() {
-    super()
-    this.clickedPost = this.clickedPost.bind(this)
-  }
-
-  clickedPost() {
-    this.props.openModal(this.props.post, this.props.id)
-  }
-
   render() {
     const { title, author } = this.props.post
 
     return (
-      <li onClick={this.clickedPost}>
+      <li>
         <span className='date'>04-04-2016</span>
         <span className='title'>{title}</span>
         <div className='colorBorder' />
@@ -27,7 +18,6 @@ export default class Post extends Component {
 }
 
 Post.propTypes = {
-  post: PropTypes.object,
   id: PropTypes.number,
-  openModal: PropTypes.func,
+  post: PropTypes.object,
 }

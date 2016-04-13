@@ -1,0 +1,65 @@
+@import '../variables';
+@import '../mixins';
+@import '../../../bower_components/lost/less/lost';
+@import '../../../bower_components/fontawesome/less/font-awesome';
+
+.modal-overlay {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(42,124,219,0.80);
+
+  .modal-content {
+    position: absolute;
+    top: 69px;
+    left: 20%;
+    right: 20%;
+    height: 556px;
+    border: 1px solid #ccc;
+    background: white;
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 70px 60px;
+
+
+    h1 {
+      color: @color-font-title-blue;
+      font-size: 36px;
+      line-height: 42px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: @color-font-grey;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    .colorBorder {
+      margin: 16px 0;
+      background: @color-light-blue;
+    }
+
+    .icon {
+      position: absolute;
+      top: 80px;
+      right: 60px;
+    }
+
+    p {
+      clear: both;
+      display: block;
+
+      font-size: 20px;
+      line-height: 30px;
+      color: @color-font-title-blue;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+}
