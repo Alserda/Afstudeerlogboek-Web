@@ -2,6 +2,32 @@ import React, { Component, PropTypes } from 'react';
 import PostsList from '../components/PostsList';
 
 export default class PostsView extends Component {
+  constructor() {
+    super()
+    this.state = {
+      modalIsOpen: false,
+      postModalComponent: {},
+    }
+    this.openModal = this.openModal.bind(this)
+    this.closeModal = this.closeModal.bind(this)
+  }
+
+  openModal(post, index) {
+    console.log('open modal for', post, index)
+    this.setState({
+      modalIsOpen: true,
+      postModalComponent: post,
+      postModalIdentifier: index,
+    })
+  }
+
+  closeModal() {
+    this.setState({
+      modalIsOpen: false,
+      postModalComponent: {},
+    })
+  }
+
   render() {
     const posts = [
       {
@@ -34,10 +60,10 @@ export default class PostsView extends Component {
       },
     ]
     return (
-      <div>
-      <PostsList posts={posts} />
+      <div className='postsView'>
+        <PostsList posts={posts} openModal={this.openModal} />
 
-      {this.props.children}
+        { /* this.props.children */ }
       </div>
     )
   }

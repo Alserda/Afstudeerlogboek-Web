@@ -1,26 +1,15 @@
 import React, { Component, PropTypes } from 'react';
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 import Icon from './Icon';
 
 export default class Post extends Component {
   constructor() {
     super()
     this.clickedPost = this.clickedPost.bind(this)
-    this.state = {
-      modalIsOpen: false,
-    }
   }
 
   clickedPost() {
-    this.setState({
-      modalIsOpen: true,
-    })
-  }
-
-  closeModal() {
-    this.setState({
-      modalIsOpen: false,
-    })
+    this.props.openModal(this.props.post, this.props.id)
   }
 
   render() {
@@ -41,5 +30,5 @@ export default class Post extends Component {
 Post.propTypes = {
   post: PropTypes.object,
   id: PropTypes.number,
-  handleClick: PropTypes.func,
+  openModal: PropTypes.func,
 }

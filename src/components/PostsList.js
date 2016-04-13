@@ -4,7 +4,7 @@ import Post from './Post'
 export default class PostsList extends Component {
   render() {
     const postComponents = this.props.posts.map((post, index) => (
-      <Post post={post} id={index} key={index} />
+      <Post post={post} id={index} key={index} openModal={this.props.openModal} />
     ));
 
     return (
@@ -19,4 +19,5 @@ export default class PostsList extends Component {
 
 PostsList.propTypes = {
   posts: PropTypes.array,
+  openModal: PropTypes.func,
 }
