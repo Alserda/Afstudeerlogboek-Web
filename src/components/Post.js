@@ -6,13 +6,13 @@ export default class Post extends Component {
     const { title, author } = this.props.post
 
     return (
-      <li>
+      <div>
         <span className='date'>04-04-2016</span>
         <span className='title'>{title}</span>
         <div className='colorBorder' />
         <span className='author'>Door {author}</span>
         <Icon type='edit' />
-      </li>
+      </div>
     )
   }
 }

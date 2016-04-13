@@ -45,13 +45,23 @@ export default class PostsView extends Component {
     this.closeModal = this.closeModal.bind(this)
   }
 
+  componentWillMount() {
+    const { id } = this.props.params;
+    return this.openModal(posts[id], id)
+  }
+
+  componentWillReceiveProps({ params: { id } }) {
+    return this.openModal(posts[id], id)
+  }
+
   openModal(post, index) {
-    console.log('open modal for', post, index)
-    this.setState({
-      modalIsOpen: true,
-      postModalComponent: post,
-      postModalIdentifier: index,
-    })
+    if (index && post) {
+      this.setState({
+        modalIsOpen: true,
+        postModalComponent: post,
+        postModalIdentifier: index,
+      })
+    }
   }
 
   closeModal() {
@@ -64,23 +74,7 @@ export default class PostsView extends Component {
     });
   }
 
-  componentWillMount() {
-    const { id } = this.props.params;
-
-    if (id) {
-      return this.openModal(posts[id], id)
-    }
-  }
-
-  componentWillReceiveProps({ params: { id } }) {
-    if (id) {
-      return this.openModal(posts[id], id)
-    }
-  }
-
   render() {
-    console.log(this.props);
-    console.log(this.state.modalIsOpen ? 'modal is open' : 'modal is gesloten')
     return (
       <div className='postsView'>
         <PostsList posts={posts} />
@@ -91,17 +85,16 @@ export default class PostsView extends Component {
             post={this.state.postModalComponent}
             closeModal={this.closeModal}
           /> : null}
-
-
-        { /* this.props.children */ }
       </div>
     )
   }
 }
 
 PostsView.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  params: PropTypes.shape({
+    id: PropTypes.string,
+  }),
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }),
 }
