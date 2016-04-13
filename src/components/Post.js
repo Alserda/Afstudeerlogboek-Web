@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-// import Modal from 'react-modal';
 import Icon from './Icon';
 
 export default class Post extends Component {

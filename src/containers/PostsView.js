@@ -1,5 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import PostsList from '../components/PostsList';
+import Modal from 'react-modal';
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+}
 
 export default class PostsView extends Component {
   constructor() {
@@ -25,6 +37,7 @@ export default class PostsView extends Component {
     this.setState({
       modalIsOpen: false,
       postModalComponent: {},
+      postModalIdentifier: null,
     })
   }
 
@@ -62,6 +75,24 @@ export default class PostsView extends Component {
     return (
       <div className='postsView'>
         <PostsList posts={posts} openModal={this.openModal} />
+
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+        >
+
+          <h2 ref='subtitle'>Hello</h2>
+          <button onClick={this.closeModal}>close</button>
+          <div>I am a modal</div>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </Modal>
 
         { /* this.props.children */ }
       </div>
